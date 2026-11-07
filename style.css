@@ -1,0 +1,195 @@
+
+/* General Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f1f5f9;
+    color: #1e293b;
+    min-height: 100vh;
+}
+
+/* Main Container */
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 50px 20px;
+}
+
+/* Header */
+
+.header {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.subtitle {
+    color: #2563eb;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.header h1 {
+    font-size: 36px;
+    margin-bottom: 12px;
+}
+
+.description {
+    color: #64748b;
+    font-size: 16px;
+}
+
+/* Search Section */
+
+.search-section {
+    max-width: 550px;
+    margin: 0 auto 30px;
+}
+
+.search-section input {
+    width: 100%;
+    padding: 16px 20px;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    font-size: 15px;
+    outline: none;
+    background: white;
+    transition: border 0.2s, box-shadow 0.2s;
+}
+
+.search-section input:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+.result-count {
+    color: #64748b;
+    font-size: 14px;
+    margin-top: 12px;
+}
+
+/* Student Grid */
+
+.student-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+/* Student Card */
+
+.student-card {
+    background: white;
+    padding: 25px;
+    border-radius: 14px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.student-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.student-number {
+    width: 44px;
+    height: 44px;
+    background: #dbeafe;
+    color: #2563eb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-weight: bold;
+    margin-bottom: 18px;
+}
+
+.student-card h2 {
+    font-size: 19px;
+    margin-bottom: 12px;
+}
+
+.student-card p {
+    color: #64748b;
+    font-size: 14px;
+    overflow-wrap: anywhere;
+    line-height: 1.5;
+}
+
+/* Loading */
+
+.loading {
+    text-align: center;
+    color: #2563eb;
+    font-weight: bold;
+    margin: 25px 0;
+}
+
+/* Error */
+
+.error-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.error {
+    color: #dc2626;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.retry-btn {
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 11px 22px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.retry-btn:hover {
+    background: #1d4ed8;
+}
+
+/* Empty Search Result */
+
+.empty-message {
+    grid-column: 1 / -1;
+    text-align: center;
+    color: #64748b;
+    padding: 40px 15px;
+    background: white;
+    border-radius: 12px;
+}
+
+/* Responsive Design */
+
+@media (max-width: 800px) {
+    .student-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 550px) {
+    .container {
+        padding: 35px 15px;
+    }
+
+    .header h1 {
+        font-size: 28px;
+    }
+
+    .student-list {
+        grid-template-columns: 1fr;
+    }
+}
